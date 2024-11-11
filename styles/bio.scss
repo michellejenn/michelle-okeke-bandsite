@@ -1,0 +1,278 @@
+@use './partials/font' as *;
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+.header{
+    width: 100%;
+    &__item--bio{
+        
+        border-bottom: 0.5rem solid $primary-color-white;
+        
+    }
+}
+.hero{
+    background-image: url('../assets/images/hero-bio.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include padding-before-headline;
+    @include tablet{
+        @include padding-before-headline-desktoptablet;
+    }
+   
+   
+    &__title{
+        margin: 0;
+        color: $primary-color-white;
+        font-weight: 700;
+        font-size: 2.5rem;
+        width: 100%;
+        @include padding-left;
+        @include tablet{
+            @include padding-left-desktoptablet;
+        }
+        
+        
+       
+    }
+}
+.content{
+    &__heading{
+        @include padding-before-headline;
+        @include padding-left;
+        @include padding-right;
+        @include padding-after-headline;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 500;
+        @include tablet{
+            @include padding-before-headline-desktoptablet;
+            @include padding-after-headline-desktoptablet;
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+            font-size: 3rem;
+            // font-weight: 700;
+        }
+    }
+    &__container{
+        @include tablet{
+            padding-left: 3rem;
+            padding-right: 3rem
+        }
+        
+    }
+   
+    &__image{
+        @include padding-left;
+        @include padding-right;
+        width: 100%;
+        @include tablet{
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+        }
+        
+      
+    }
+    &__writeup{
+        @include padding-left;
+        @include padding-right;
+        font-size: 2.2rem;
+        font-weight: 800;
+        @include tablet{
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+            font-size: 1.5rem;
+        }
+        
+        
+    }
+    &__quote{
+        @include justify-center;
+    
+    }
+    &__speaker{
+        @include padding-after-headline;
+        @include tablet{
+            @include padding-after-headline-desktoptablet;
+        }
+    }
+    &__item-heading{
+        font-size: 2.2rem;
+        @include padding-left;
+        @include padding-right;
+        @include tablet{
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+            font-size: 1.5rem;
+        }
+    }
+    &__summary{
+        @include padding-left;
+        @include padding-right;
+        @include column-direction;
+        justify-content: center;
+        width: auto;
+        font-weight: 400;
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+        }
+    }
+    &__paragraph{
+        @include tablet{
+        //    width: 30%;
+           font-size: .875rem;
+           width: 45%;
+            
+        }
+    }
+    
+    &__item{
+        font-size: 2.2rem;
+        font-weight: 400;
+        @include tablet{
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            
+           
+            
+        }
+        
+    }
+    
+    
+}
+.Gallery{
+    background-color: $secondary-color-alabaster;
+    
+    
+    &__heading{
+        @include padding-left;
+        @include padding-right;
+        font-size: 3.5rem;
+        @include padding-before-headline;
+        @include padding-after-headline;
+        @include tablet{
+            @include padding-before-headline-desktoptablet;
+            @include padding-after-headline-desktoptablet;
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+            padding-right: 0;
+            
+        }
+    }
+    &__container{
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include padding-left-desktoptablet;
+            @include padding-right-desktoptablet;
+        }
+        
+    }
+    &__photo{
+        width: 100%;
+        @include padding-left;
+        @include padding-right;
+        @include padding-after-headline;
+        @include tablet{
+            @include padding-after-headline-desktoptablet;
+            // @include padding-left-desktoptablet;
+            // @include padding-right-desktoptablet;
+            width: 32%;
+            // padding-left: 1rem;
+            // padding-right: 1rem;
+            // flex-grow: 1;
+        }
+    }
+}
+.footer{
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    font-size: 1.5rem;
+    @include padding-left;
+    @include padding-right;
+    @include tablet{
+        @include padding-left-desktoptablet;
+        @include padding-right-desktoptablet;
+    }
+   &__wrapper{
+    width: 60%;
+    // @include tablet{
+    //     width: 100%;
+    // }
+   }
+   &__heading{
+    @include padding-before-headline;
+    @include padding-after-headline;
+    font-size: 2.5rem;
+    @include tablet{
+        @include padding-before-headline-desktoptablet;
+        @include padding-after-headline-desktoptablet;
+    }
+   }
+   &__icons{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    @include tablet{
+        width: 20%;
+        align-items: center;
+    }
+
+   }
+   &__icon{
+    width: 2rem;
+    height: 2.5rem;
+   }
+    &__logo-top{
+        display: none;
+        @include tablet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__subheading{
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+    &__bottom{
+        @include padding-before-headline;
+        @include tablet{
+            @include padding-before-headline-desktoptablet;
+        }
+    }
+    &__logo-bottom{
+        font-size: 3rem;
+    }
+    &__copyright{
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+    &__section{
+        // line-height: 1.25rem;
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            @include padding-before-headline-desktoptablet;
+        }
+    }
+    &__container{
+        @include tablet{
+            display: flex;
+        }
+        
+    }
+}

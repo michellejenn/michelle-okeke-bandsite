@@ -1,0 +1,60 @@
+@use './font' as *;
+@use './variables' as *;
+@use './mixins' as *;
+
+*{
+   box-sizing: border-box;
+}
+
+body{
+   font-family: "NunitoSans";
+   margin: 0;
+   // width: 100%;
+   
+   
+}
+// h1{
+//    font-weight:700;
+
+// }
+// h2{
+//    font-weight: 500;
+   
+// }
+// h3{
+//    font-weight: 400;
+// }
+a{
+   text-decoration:none;
+   color: inherit;
+}
+li{
+   list-style-type: none;
+}
+.header{
+   background-color: $primary-color-black;
+   color: $primary-color-white;
+   font-weight: 700;
+   line-height: 4.25rem;
+   &__logo{ margin-top: 0;
+      font-size: 3rem;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+      
+
+
+   }
+   &__list{
+      padding-left: 0;
+      display: flex;
+      margin: 0;
+   }
+   &__item{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      
+   }
+}

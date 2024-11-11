@@ -1,0 +1,59 @@
+@use "variables" as *;
+@mixin tablet{
+    @media screen and (min-width: $tablet-breakpoint)
+    {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: $desktop-breakpoint)
+    {
+        @content;
+    }
+}
+
+@mixin padding-left{
+    padding-left: $padding-between-components-mobile;
+    
+}
+@mixin padding-right{
+    padding-right: $padding-between-components-mobile;
+    
+}
+@mixin padding-before-headline{
+    padding-top: $padding-before-headlines-mobile;
+    margin: 0;
+}
+@mixin padding-after-headline{
+    padding-bottom: $padding-after-headlines-mobile;
+    margin: 0;
+}
+
+
+@mixin padding-left-desktoptablet{
+    padding-left: $padding-between-components-desktoptablet;
+    
+}
+@mixin padding-right-desktoptablet{
+    padding-right: $padding-between-components-desktoptablet;
+    
+}
+@mixin padding-before-headline-desktoptablet{
+    padding-top: $padding-before-headlines-desktoptablet;
+    margin: 0;
+}
+@mixin padding-after-headline-desktoptablet{
+    padding-bottom: $padding-after-headlines-desktoptablet;
+    margin: 0;
+}
+@mixin justify-center{
+    display: flex;
+    justify-content: center;
+}
+@mixin column-direction{
+    display: flex;
+    flex-direction: column;
+}
+
+
