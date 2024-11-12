@@ -9,21 +9,10 @@
 body{
    font-family: "NunitoSans";
    margin: 0;
-   // width: 100%;
+   
    
    
 }
-// h1{
-//    font-weight:700;
-
-// }
-// h2{
-//    font-weight: 500;
-   
-// }
-// h3{
-//    font-weight: 400;
-// }
 a{
    text-decoration:none;
    color: inherit;
@@ -31,30 +20,99 @@ a{
 li{
    list-style-type: none;
 }
+
 .header{
    background-color: $primary-color-black;
    color: $primary-color-white;
    font-weight: 700;
    line-height: 4.25rem;
+   
    &__logo{ margin-top: 0;
       font-size: 3rem;
       margin-bottom: 0;
       display: flex;
       justify-content: center;
       padding-top: 1rem;
-      
-
-
+      @include tablet{
+         padding-left: 1rem;
+      }
+      @include desktop{
+         padding-left: 6rem;
+      }
+   
+   
+   
    }
-   &__list{
+      
+    &__list{
+      padding-left: 0;
+      margin: 0;
+      @include tablet{
+         display: flex;
+         justify-content: flex-start;
+         gap: 4rem;
+         width: 100%
+    
+         }
+   
+      
+   }
+   &__mobile{
       padding-left: 0;
       display: flex;
+      flex-direction: row;
+      gap: 2rem;
       margin: 0;
+      @include tablet{
+         gap: 3rem;
+       
+        
+         
+      }
+      
    }
-   &__item{
+     &__item{
       width: 50%;
       display: flex;
       justify-content: center;
+      @include tablet{
+         display: flex;
+         flex: 1;
+         justify-content: center;
+        
+      }
+         
+        
+      }
+   
+      &__link {
+         color: #ffffff; 
+         text-decoration: none;
+         transition: color 0.3s ease, font-size 0.3s ease;
+      
+         &:hover {
+            color: #3b1a12; 
+            font-size: 1.1em;
+         }
+      }
+   
       
    }
-}
+  
+  
+ 
+   // &__list{
+   //    padding-left: 0;
+   //    display: flex;
+   //    margin: 0;
+      
+   // }
+  
+   // &__item{
+   //    width: 50%;
+   //    display: flex;
+   //    justify-content: center;
+     
+     
+      
+   // }

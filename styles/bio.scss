@@ -8,12 +8,14 @@
     width: 100%;
     &__item--bio{
         
-        border-bottom: 0.5rem solid $primary-color-white;
+        border-bottom: 0.3rem solid $primary-color-white;
+
         
     }
+  
 }
 .hero{
-    background-image: url('../assets/images/hero-bio.jpg');
+    background-image: linear-gradient(rgba(35, 24, 24, 0.5), rgba(9, 1, 1, 0.35)), url('../assets/images/hero-bio.jpg');
     background-position: center;
     background-size: cover;
     min-height: 60vh;
@@ -24,8 +26,6 @@
     @include tablet{
         @include padding-before-headline-desktoptablet;
     }
-   
-   
     &__title{
         margin: 0;
         color: $primary-color-white;
@@ -36,9 +36,6 @@
         @include tablet{
             @include padding-left-desktoptablet;
         }
-        
-        
-       
     }
 }
 .content{
@@ -47,26 +44,27 @@
         @include padding-left;
         @include padding-right;
         @include padding-after-headline;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
         font-weight: 500;
         @include tablet{
             @include padding-before-headline-desktoptablet;
             @include padding-after-headline-desktoptablet;
             @include padding-left-desktoptablet;
             @include padding-right-desktoptablet;
-            font-size: 3rem;
-            // font-weight: 700;
+            font-size: 3rem;   
         }
+    }
+    @include desktop{
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     &__container{
         @include tablet{
             padding-left: 3rem;
             padding-right: 3rem
-        }
-        
+        } 
     }
-   
     &__image{
         @include padding-left;
         @include padding-right;
@@ -75,8 +73,6 @@
             @include padding-left-desktoptablet;
             @include padding-right-desktoptablet;
         }
-        
-      
     }
     &__writeup{
         @include padding-left;
@@ -88,12 +84,9 @@
             @include padding-right-desktoptablet;
             font-size: 1.5rem;
         }
-        
-        
     }
     &__quote{
         @include justify-center;
-    
     }
     &__speaker{
         @include padding-after-headline;
@@ -122,40 +115,32 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            
             @include padding-left-desktoptablet;
             @include padding-right-desktoptablet;
         }
     }
     &__paragraph{
         @include tablet{
-        //    width: 30%;
            font-size: .875rem;
-           width: 45%;
-            
+           width: 45%;  
+        }
+        @include desktop{
+            font-size: 1.3rem;
         }
     }
-    
     &__item{
         font-size: 2.2rem;
         font-weight: 400;
         @include tablet{
             font-size: 1rem;
             display: flex;
-            justify-content: space-between;
-            
-           
-            
+            justify-content: space-between;   
         }
         
-    }
-    
-    
+    }    
 }
 .Gallery{
     background-color: $secondary-color-alabaster;
-    
-    
     &__heading{
         @include padding-left;
         @include padding-right;
@@ -167,8 +152,7 @@
             @include padding-after-headline-desktoptablet;
             @include padding-left-desktoptablet;
             @include padding-right-desktoptablet;
-            padding-right: 0;
-            
+            padding-right: 0;  
         }
     }
     &__container{
@@ -179,100 +163,179 @@
             @include padding-left-desktoptablet;
             @include padding-right-desktoptablet;
         }
-        
     }
     &__photo{
         width: 100%;
         @include padding-left;
         @include padding-right;
         @include padding-after-headline;
+        filter: grayscale(70%); 
+        transition: filter 0.3s ease;
+        &:hover{
+            filter: grayscale(0%);     
+        }
         @include tablet{
             @include padding-after-headline-desktoptablet;
-            // @include padding-left-desktoptablet;
-            // @include padding-right-desktoptablet;
             width: 32%;
-            // padding-left: 1rem;
-            // padding-right: 1rem;
-            // flex-grow: 1;
         }
     }
 }
 .footer{
     background-color: $primary-color-black;
     color: $primary-color-white;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     @include padding-left;
     @include padding-right;
     @include tablet{
         @include padding-left-desktoptablet;
         @include padding-right-desktoptablet;
     }
-   &__wrapper{
-    width: 60%;
-    // @include tablet{
-    //     width: 100%;
-    // }
-   }
+    @include desktop{
+        
+            padding-left: 3rem;
+            padding-right: 3rem;
+        
+    }
+ 
    &__heading{
+   
+    font-size: 2rem;
+    
+    
+    @include tablet{
+        padding-top: 0;
+        margin-top: 0;
+       
+    }
+    @include desktop{
+        font-size: 1.5rem;
+        
+    }
+   }
+   &__unordered{
     @include padding-before-headline;
     @include padding-after-headline;
-    font-size: 2.5rem;
+    padding-left: 0;
     @include tablet{
+        display: flex;
+        flex-direction: row;
         @include padding-before-headline-desktoptablet;
-        @include padding-after-headline-desktoptablet;
+        padding-bottom: 0;
     }
+   
    }
    &__icons{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    
+    
+    padding-left: 0;
+    width: 60%;
     @include tablet{
-        width: 20%;
-        align-items: center;
+        width: 60%;
+     
     }
-
+    @include desktop{
+       
+        
+        
+    }
    }
    &__icon{
-    width: 2rem;
+    width: 2.5rem;
     height: 2.5rem;
+    @include tablet{
+        width: 1.6rem;
+        height: 1.6rem;
+        
+    }
+    
    }
+   &__listitem{
+        width: 50%;
+        @include desktop{
+            width: 30%;
+        }
+   }
+
     &__logo-top{
         display: none;
         @include tablet{
             display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-top: 0;
+            justify-self: flex-end;
+            
+        }
+        
+      
+    }
+    &__subsection{
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-right: 20px;
+        }
+       
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: row;
+        }
+        @include desktop{
+            padding-right: 15rem;
+           
         }
     }
+
     &__subheading{
-        font-weight: 800;
-        font-size: 1.8rem;
+        @include tablet{
+            width: auto;
+           
+        }
     }
+    &__address{
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: auto;
+        }
+       
+    }
+    &__booking{
+        font-size: 1rem;
+    }
+    &__section{
+        @include tablet{
+
+        }
+    }
+
     &__bottom{
         @include padding-before-headline;
         @include tablet{
             @include padding-before-headline-desktoptablet;
         }
     }
+    
     &__logo-bottom{
         font-size: 3rem;
+        @include tablet{
+            display: none;
+        }
     }
     &__copyright{
         margin: 0;
         padding-bottom: 2rem;
     }
-    &__section{
-        // line-height: 1.25rem;
-        @include tablet{
-            display: flex;
-            justify-content: space-between;
-            @include padding-before-headline-desktoptablet;
-        }
-    }
-    &__container{
-        @include tablet{
-            display: flex;
-        }
-        
-    }
+ 
 }

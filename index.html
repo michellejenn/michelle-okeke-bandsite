@@ -9,13 +9,17 @@
 <body>
     <header class = "header">
         <nav class = "header__nav">
-            <h1 class ="header__logo"><a href="#">BANDSITE</a></h1>
             <ul class ="header__list">
-                <li class ="header__item header__item--bio"><h2><a class ="header__link" href="#">Biography</a></h2></li>
+                <li class ="header__logo"><h1 class ="header__logo"><a class ="header__link" href="./index.html">BANDSITE</a></h1></li>
+                <div class="header__mobile">
+                <li class ="header__item header__item--bio"><h2><a class ="header__link header__link--bio" href="./index.html">Biography</a></h2></li>
                 <li class ="header__item"><h2><a class ="header__link" href="#">Shows</a></h2></li>
+                </div>
+                
             </ul>
         </nav>
     </header>
+   
     <main class = "main">
         <section class = "hero">
             <h2 class ="hero__title">The Bees Knees</h2>
@@ -81,10 +85,10 @@
                     <img class ="Gallery__photo" src="./assets/images/Photo-gallery-3.jpg" alt="image">
                     <img class ="Gallery__photo" src="./assets/images/Photo-gallery-4.jpg" alt="image">
                     <img class ="Gallery__photo" src="./assets/images/Photo-gallery-5.jpg" alt="image">
-                    <img class ="Gallery__photo" src="./assets/images/Photo-gallery-6.jpg" alt="image">
+                    <img class ="Gallery__photo" src="./assets/images/Photo-gallery-9.jpg" alt="image">
                     <img class ="Gallery__photo" src="./assets/images/Photo-gallery-7.jpg" alt="image">
                     <img class ="Gallery__photo" src="./assets/images/Photo-gallery-8.jpg" alt="image">
-                    <img class ="Gallery__photo" src="./assets/images/Photo-gallery-9.jpg" alt="image">
+                    <img class ="Gallery__photo" src="./assets/images/Photo-gallery-6.jpg" alt="image">
                 </div>
                 
             </section>
@@ -94,31 +98,39 @@
     <footer class ="footer">
         <div class ="footer__wrapper">
             <section class ="footer__section">
-                <h3 class ="footer__heading">Get in Touch</h3>
-                <div class ="footer__icons">
-                    <img class ="footer__icon" src="./assets/icons/Icon-instagram.svg" alt="instagram icon">
-                    <img class ="footer__icon" src="./assets/icons/Icon-facebook.svg" alt="facebook icon">
-                    <img class ="footer__icon" src="./assets/icons/Icon-twitter.svg" alt="twitter icon">
-                </div>
-                <h3 class ="footer__logo-top"><a href="">BANDSITE</a></h3>
-            </section>
+                <ul class ="footer__unordered">
+                    <li class="footer__listitem"><h3 class ="footer__heading">Get in Touch</h3></li>
+                    <li class ="footer__listitem">
+                        <ul class ="footer__icons">
+                            <li class ="footer__iconimage"><a href=""><img class ="footer__icon" src="./assets/icons/Icon-instagram.svg" alt="instagram icon"></a></li>
+                            <li class ="footer__iconimage"><a href=""><img class ="footer__icon" src="./assets/icons/Icon-facebook.svg" alt="facebook icon"></a></li>
+                            <li class ="footer__iconimage"><a href=""><img class ="footer__icon" src="./assets/icons/Icon-twitter.svg" alt="twitter icon"></a></li>
+                        </ul>
+                    </li>
+                    <li class ="footer__listitem"><h3 class ="footer__logo-top"><a href="">BANDSITE</a></h3></li>
+                </ul>
+
+              
             <div class ="footer__container">
-                <section class ="footer_subsection">
+                <section class ="footer__subsection">
                     <h4 class ="footer__subheading">The Bees Knees Management</h4>
                     <p class="footer__address">503 Broadway Penthouse, New York, NY 10012, USA</p>
-                    <p class ="footer__booking">info@thebeesknees.com</p>
+                    
+                    <a class ="footer__booking" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
                 </section>
                 <section class ="footer__subsection">
                     <h4 class ="footer__subheading">Limited Artist Group</h4>
-                    <p class="footer__address">Booking Agent for US/ South America/ Japan</p>
-                    <!-- <p class="footer__address" >US/ South America/ Japan</p> -->
-                    <p class ="footer__booking">bookings@limitlessag.com</p>
+                    <p class="footer__address">Booking Agent for US / South America / Japan</p>
+                    
+                   
+                    <a class ="footer__booking" href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
                     
                 </section>
                 <section class ="footer__subsection">
                     <h4 class ="footer__subheading">ARCH Entertainment</h4>
-                    <p class="footer__address">Booking Agent for UK/EU/AU</p>
-                    <p class ="footer__booking">bookings@archentertainment.com</p> 
+                    <p class="footer__address footer__address--uk">Booking Agent for UK / EU / AU</p>
+                    <a class ="footer__booking" href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
+                    
                 </section>
             </div>
             
