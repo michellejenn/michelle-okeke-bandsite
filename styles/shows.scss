@@ -1,0 +1,200 @@
+// @use './partials/font' as *;
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.header{
+    // width: 100%;
+    &__item--shows{
+        
+        border-bottom: 0.3rem solid $primary-color-white;
+
+    }
+  
+}
+iframe{
+    width:"40%"; 
+    height:"166";
+    width: 90%;
+    padding-top: 0.8rem;
+  
+}
+
+.hero{
+    background-image: linear-gradient(rgba(35, 24, 24, 0.5), rgba(9, 1, 1, 0.35)), url('../assets/images/hero-shows.jpg');
+    background-position: center;
+    background-size: cover;
+    // width: 100%;
+    min-height: 60vh;
+    
+    
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    @include padding-before-headline;
+    @include tablet{
+        @include padding-before-headline-desktoptablet;
+    }
+    @include padding-left;
+    &__title{
+        margin: 0;
+        color: $primary-color-white;
+        font-weight: 700;
+        font-size: 2.5rem;
+       
+    //     width: 100%;
+    //     @include padding-left;
+    //     @include tablet{
+    //         @include padding-left-desktoptablet;
+    //     }
+    }
+    &__subtitle{
+        padding-top: 2rem;
+    }
+    &__title-up{
+        margin-bottom: 0;
+        margin-top: 0.4rem;
+
+    }
+    &__title-down{
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+    &__subtitle{
+        margin: 0;
+        color: $primary-color-white;
+        font-weight: 400;
+        font-size: 2.0rem;
+
+    }
+
+}
+.shows{
+    @include padding-left;
+    @include tablet{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @include desktop{
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 5rem;
+        
+    }
+    &__heading{
+        font-size: 3rem;
+        @include desktop{
+            // width: 30%;
+        }
+    }
+  
+    &__heading-list{
+        font-weight: 700;
+        color: $primary-color-silver;
+        display: none;
+        @include tablet{
+            
+            display:flex;
+           
+            
+            
+            
+            
+
+        }
+        @include desktop{
+            padding: 2rem 2rem 2rem 1rem;
+            flex:1;
+            
+        }
+
+
+    }
+    &__unordered-heading{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0rem;
+        padding-right: 2rem;
+        // padding-right: 2rem;
+        margin-right: 15rem;
+        @include desktop{
+            width: 100%;
+            // display: flex;
+            // justify-content: space-between;
+        }
+    }
+    &__list{
+        padding-left: 0;
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        
+            
+        }
+    }
+    &__ticket{
+        border-bottom: 4px solid $secondary-color-mercury;
+        @include desktop{
+            // width: 100%;
+        }
+        // display: flex;
+        // justify-content: space-between;
+
+    &__tickets{
+        @include desktop{
+            // margin: 6rem;
+            // padding: 2rem;
+
+        }
+    }
+    }
+    &__item{
+        color: $secondary-color-darkblack;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+        font-weight: 500;
+        flex-grow: 1;
+        flex-basis: 0;
+        
+       
+        &--date{
+            font-weight: 700;
+        }
+        
+    }
+    &__item-heading{
+        color: $primary-color-silver;
+        font-weight: 700;
+        margin-bottom: 0;
+        @include tablet{
+            // padding-bottom: 1rem;
+            display: none;
+        }
+        
+    }
+    &__button{
+        color: $primary-color-white;
+        padding: 1.5rem 0rem ;
+        background-color: $primary-color-black;
+        font-weight: 700;
+        font-size: 1.5rem;
+        border-radius: 12px;
+        width: 90%;
+        @include tablet{
+            
+            width: 28%;
+            height: 4rem;
+            padding: 0rem 0rem;
+            font-size: 1.0rem;
+            // margin-right: 2rem;
+           
+            
+            
+            
+            
+            
+        }
+    }
+    
+}

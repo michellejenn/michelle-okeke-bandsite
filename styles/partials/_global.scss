@@ -9,9 +9,7 @@
 body{
    font-family: "NunitoSans";
    margin: 0;
-   
-   
-   
+  
 }
 a{
    text-decoration:none;
@@ -39,9 +37,6 @@ li{
       @include desktop{
          padding-left: 6rem;
       }
-   
-   
-   
    }
       
     &__list{
@@ -52,10 +47,8 @@ li{
          justify-content: flex-start;
          gap: 4rem;
          width: 100%
-    
          }
    
-      
    }
    &__mobile{
       padding-left: 0;
@@ -66,10 +59,8 @@ li{
       @include tablet{
          gap: 3rem;
        
-        
-         
       }
-      
+   
    }
      &__item{
       width: 50%;
@@ -81,8 +72,6 @@ li{
          justify-content: center;
         
       }
-         
-        
       }
    
       &__link {
@@ -95,24 +84,165 @@ li{
             font-size: 1.1em;
          }
       }
-   
       
    }
-  
-  
- 
-   // &__list{
-   //    padding-left: 0;
-   //    display: flex;
-   //    margin: 0;
-      
-   // }
-  
-   // &__item{
-   //    width: 50%;
-   //    display: flex;
-   //    justify-content: center;
+
+   .footer{
+      background-color: $primary-color-black;
+      color: $primary-color-white;
+      font-size: 1.6rem;
+      @include padding-left;
+      @include padding-right;
+      @include tablet{
+          @include padding-left-desktoptablet;
+          @include padding-right-desktoptablet;
+      }
+      @include desktop{
+          
+              padding-left: 3rem;
+              padding-right: 3rem;
+          
+      }
+   
+     &__heading{
      
-     
+      font-size: 2rem;
       
-   // }
+      
+      @include tablet{
+          padding-top: 0;
+          margin-top: 0;
+         
+      }
+      @include desktop{
+          font-size: 1.5rem;
+          
+      }
+     }
+     &__unordered{
+      @include padding-before-headline;
+      @include padding-after-headline;
+      padding-left: 0;
+      @include tablet{
+          display: flex;
+          flex-direction: row;
+          @include padding-before-headline-desktoptablet;
+          padding-bottom: 0;
+      }
+     
+     }
+     &__icons{
+      display: flex;
+      justify-content: space-between;
+      
+      
+      padding-left: 0;
+      width: 60%;
+      @include tablet{
+          width: 60%;
+       
+      }
+      @include desktop{
+         
+          
+          
+      }
+     }
+     &__icon{
+      width: 2.5rem;
+      height: 2.5rem;
+      @include tablet{
+          width: 1.6rem;
+          height: 1.6rem;
+          
+      }
+      
+     }
+     &__listitem{
+          width: 50%;
+          @include desktop{
+              width: 30%;
+          }
+     }
+  
+      &__logo-top{
+          display: none;
+          @include tablet{
+              display: flex;
+              margin-top: 0;
+              justify-self: flex-end;
+              
+          }
+          
+        
+      }
+      &__subsection{
+          display: flex;
+          flex-direction: column;
+          width: 49%;
+          @include tablet{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: space-between;
+              padding-right: 20px;
+          }
+         
+      }
+      &__container{
+          display: flex;
+          flex-direction: column;
+          @include tablet{
+              font-size: 1.2rem;
+              display: flex;
+              flex-direction: row;
+          }
+          @include desktop{
+              padding-right: 15rem;
+             
+          }
+      }
+  
+      &__subheading{
+          @include tablet{
+              width: auto;
+             
+          }
+      }
+      &__address{
+          @include tablet{
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              width: auto;
+          }
+         
+      }
+      &__booking{
+          font-size: 1rem;
+      }
+      &__section{
+          @include tablet{
+  
+          }
+      }
+  
+      &__bottom{
+          @include padding-before-headline;
+          @include tablet{
+              @include padding-before-headline-desktoptablet;
+          }
+      }
+      
+      &__logo-bottom{
+          font-size: 3rem;
+          @include tablet{
+              display: none;
+          }
+      }
+      &__copyright{
+          margin: 0;
+          padding-bottom: 2rem;
+      }
+   
+  }
