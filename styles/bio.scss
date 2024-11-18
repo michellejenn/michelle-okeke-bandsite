@@ -8,9 +8,7 @@
     width: 100%;
     &__item--bio{
         
-        border-bottom: 0.3rem solid $primary-color-white;
-
-        
+        border-bottom: 0.3rem solid $primary-color-white; 
     }
   
 }
@@ -191,198 +189,190 @@ input{
         height: 4rem;
         
     }
-    
-
 }
 input::placeholder {
     color: $secondary-color-darkblack;
-    font-size: 1rem;
-    
+    font-size: 1.3rem;
   }
-  textarea::placeholder {
-    color: lightblue;
-    font-size: 14px;
-  }
+
 .comment{
-    &__avatar{
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        
+    border-bottom: 2px solid $secondary-color-mercury;
+    
+    padding-bottom: 2rem;
+    
+    &__title{
+        padding-left: 1rem;
+        @include tablet{
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
     }
-    &__name{
+    &__form{
+        @include tablet{
+            margin-left: 6rem;
+            margin-right: 6rem;
+        }
+        @include desktop{
+            margin-left: 10rem;
+        }
+    }
+    &__avatar{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-top: 2.6rem;
+        @include tablet{
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &__name{ 
+        display: flex;
+        flex-direction: column;
+        padding-left: 4.2rem;
+        gap: 1rem;
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__profile{
+        display: flex;
+        gap: 1rem;
+        padding-left: 1rem;
+
         
-        font-weight: 4rem;
-        background-color: $secondary-color-alabaster;
+        
     }
     &__input{
-        color: blue;
-    }
-}
-.previous{
-    &__image{
-        background-color: $secondary-color-mercury;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-    }
-}
-// .footer{
-//     background-color: $primary-color-black;
-//     color: $primary-color-white;
-//     font-size: 1.6rem;
-//     @include padding-left;
-//     @include padding-right;
-//     @include tablet{
-//         @include padding-left-desktoptablet;
-//         @include padding-right-desktoptablet;
-//     }
-//     @include desktop{
-        
-//             padding-left: 3rem;
-//             padding-right: 3rem;
-        
-//     }
- 
-//    &__heading{
-   
-//     font-size: 2rem;
-    
-    
-//     @include tablet{
-//         padding-top: 0;
-//         margin-top: 0;
-       
-//     }
-//     @include desktop{
-//         font-size: 1.5rem;
-        
-//     }
-//    }
-//    &__unordered{
-//     @include padding-before-headline;
-//     @include padding-after-headline;
-//     padding-left: 0;
-//     @include tablet{
-//         display: flex;
-//         flex-direction: row;
-//         @include padding-before-headline-desktoptablet;
-//         padding-bottom: 0;
-//     }
-   
-//    }
-//    &__icons{
-//     display: flex;
-//     justify-content: space-between;
-    
-    
-//     padding-left: 0;
-//     width: 60%;
-//     @include tablet{
-//         width: 60%;
-     
-//     }
-//     @include desktop{
-       
-        
-        
-//     }
-//    }
-//    &__icon{
-//     width: 2.5rem;
-//     height: 2.5rem;
-//     @include tablet{
-//         width: 1.6rem;
-//         height: 1.6rem;
-        
-//     }
-    
-//    }
-//    &__listitem{
-//         width: 50%;
-//         @include desktop{
-//             width: 30%;
-//         }
-//    }
-
-//     &__logo-top{
-//         display: none;
-//         @include tablet{
-//             display: flex;
-//             margin-top: 0;
-//             justify-self: flex-end;
-            
-//         }
+        width: auto;
+        min-width: 80vw;
+        height: 3rem;
+        margin-bottom: 2rem;
+        background-color: $secondary-color-alabaster;
+        margin-right: 2rem;
         
       
-//     }
-//     &__subsection{
-//         display: flex;
-//         flex-direction: column;
-//         width: 49%;
-//         @include tablet{
-//             display: flex;
-//             flex-direction: column;
-//             align-items: flex-start;
-//             justify-content: space-between;
-//             padding-right: 20px;
-//         }
-       
-//     }
-//     &__container{
-//         display: flex;
-//         flex-direction: column;
-//         @include tablet{
-//             font-size: 1.2rem;
-//             display: flex;
-//             flex-direction: row;
-//         }
-//         @include desktop{
-//             padding-right: 15rem;
-           
-//         }
-//     }
+        @include tablet{
+            min-width: 70vw;
+        }
+        @include desktop{
+            min-width: 50vw;
+           }
+    }
+    &__submit{
+        display: flex;
+        justify-self: center;
+        min-width: 80vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        height: 4rem;
+        background-color: $secondary-color-darkblack;
+        color: $primary-color-white;
+        border: 0px;
+        font-size: 1.7rem;
+        border-radius: 0.25rem;
+        @include tablet{
+            display: flex;
+            justify-self:flex-end;
+            min-width: 20vw;
+            margin-right: 2rem;
+        }
+        @include desktop{
+            display: flex;
+            justify-self: center;
+            margin-right: 9rem;
+        } 
+    }
 
-//     &__subheading{
-//         @include tablet{
-//             width: auto;
-           
-//         }
-//     }
-//     &__address{
-//         @include tablet{
-//             display: flex;
-//             justify-content: center;
-//             align-content: center;
-//             width: auto;
-//         }
-       
-//     }
-//     &__booking{
-//         font-size: 1rem;
-//     }
-//     &__section{
-//         @include tablet{
-
-//         }
-//     }
-
-//     &__bottom{
-//         @include padding-before-headline;
-//         @include tablet{
-//             @include padding-before-headline-desktoptablet;
-//         }
-//     }
+}
+#guest__name{
+    display: flex;
+   min-width: 85vw;
+   @include tablet{
+    min-width: 70vw;
+   }
+   @include desktop{
+    min-width: 40vw;
+   }
+}
+textarea{
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#guest__comment{
+    height: 8rem;
+    display: flex;
+    resize: none;
+    @include tablet{
+        min-width: 70vw;
+        max-width: 70vw;
+    }
+    @include desktop{
+        min-width: 40vw;
+        max-width: 40vw;
+       }
+}
+#guest__comment::placeholder{
+    position: relative;
+    top: -2.5rem;
+}
+.previous{
+    padding-left: 1rem;
+    @include tablet{
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    &__article{
+        display: flex;
+        gap: 2rem;
+        padding-right: 2rem;
+        border-bottom: 0.125rem solid  $secondary-color-mercury;
+        margin-bottom: 2rem;
+        margin-right: 5rem;
+        @include desktop{
+            max-width: 70vw;
+            justify-self: center;
+            margin-right: 14rem;
+    }
+}
+    &__wrapper{
+        display: flex;
+        gap: 15rem;
+        align-items: flex-end;
+        @include desktop{
+        }
+    }
     
-//     &__logo-bottom{
-//         font-size: 3rem;
-//         @include tablet{
-//             display: none;
-//         }
-//     }
-//     &__copyright{
-//         margin: 0;
-//         padding-bottom: 2rem;
-//     }
- 
-// }
+    &__name{
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        flex: 1;
+    }
+    &__date{
+        flex-grow: 1;
+        flex-basis: 5rem;
+        flex: 1;
+        color: $primary-color-silver;
+    }
+    &__comment{
+        font-size: 1.5rem;
+    }
+    &__image{
+        background-color: $secondary-color-mercury;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-self: flex-start;
+        margin-left: 1rem;
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+}
+

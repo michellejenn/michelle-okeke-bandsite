@@ -490,40 +490,216 @@ input {
 
 input::-moz-placeholder {
   color: #000000;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 input::placeholder {
   color: #000000;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
-textarea::-moz-placeholder {
-  color: lightblue;
-  font-size: 14px;
+.comment {
+  border-bottom: 2px solid #E1E1E1;
+  padding-bottom: 2rem;
 }
-
-textarea::placeholder {
-  color: lightblue;
-  font-size: 14px;
+.comment__title {
+  padding-left: 1rem;
 }
-
+@media screen and (min-width: 768px) {
+  .comment__title {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment__form {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comment__form {
+    margin-left: 10rem;
+  }
+}
 .comment__avatar {
-  width: 36px;
-  height: 36px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
+  margin-top: 2.6rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .comment__name {
-  font-weight: 4rem;
-  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4.2rem;
+  gap: 1rem;
+}
+.comment__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comment__profile {
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
 }
 .comment__input {
-  color: blue;
+  width: auto;
+  min-width: 80vw;
+  height: 3rem;
+  margin-bottom: 2rem;
+  background-color: #FAFAFA;
+  margin-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__input {
+    min-width: 70vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comment__input {
+    min-width: 50vw;
+  }
+}
+.comment__submit {
+  display: flex;
+  justify-self: center;
+  min-width: 80vw;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  height: 4rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 0px;
+  font-size: 1.7rem;
+  border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__submit {
+    display: flex;
+    justify-self: flex-end;
+    min-width: 20vw;
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comment__submit {
+    display: flex;
+    justify-self: center;
+    margin-right: 9rem;
+  }
 }
 
+#guest__name {
+  display: flex;
+  min-width: 85vw;
+}
+@media screen and (min-width: 768px) {
+  #guest__name {
+    min-width: 70vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #guest__name {
+    min-width: 40vw;
+  }
+}
+
+textarea {
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#guest__comment {
+  height: 8rem;
+  display: flex;
+  resize: none;
+}
+@media screen and (min-width: 768px) {
+  #guest__comment {
+    min-width: 70vw;
+    max-width: 70vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #guest__comment {
+    min-width: 40vw;
+    max-width: 40vw;
+  }
+}
+
+#guest__comment::-moz-placeholder {
+  position: relative;
+  top: -2.5rem;
+}
+
+#guest__comment::placeholder {
+  position: relative;
+  top: -2.5rem;
+}
+
+.previous {
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .previous {
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+}
+.previous__article {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem;
+  border-bottom: 0.125rem solid #E1E1E1;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .previous__article {
+    max-width: 70vw;
+    justify-self: center;
+    margin-right: 14rem;
+  }
+}
+.previous__wrapper {
+  display: flex;
+  gap: 15rem;
+  align-items: flex-end;
+}
+.previous__name {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.previous__date {
+  flex-grow: 1;
+  flex-basis: 5rem;
+  flex: 1;
+  color: #AFAFAF;
+}
+.previous__comment {
+  font-size: 1.5rem;
+}
 .previous__image {
   background-color: #E1E1E1;
-  width: 36px;
-  height: 36px;
+  width: 10rem;
+  height: 3rem;
   border-radius: 50%;
+  display: flex;
+  justify-self: flex-start;
+  margin-left: 1rem;
+  max-width: 3rem;
+  min-width: 3rem;
 }/*# sourceMappingURL=bio.css.map */

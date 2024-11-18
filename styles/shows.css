@@ -263,10 +263,25 @@ li {
 }
 
 iframe {
-  width: "40%";
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
   height: "166";
-  width: 90%;
-  padding-top: 0.8rem;
+  width: 90vw;
+  padding-bottom: 4rem;
+  padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  iframe {
+    width: 60vw;
+    height: "70";
+  }
+}
+@media screen and (min-width: 1024px) {
+  iframe {
+    height: "70";
+    width: 40vw;
+  }
 }
 
 .hero {
@@ -286,14 +301,27 @@ iframe {
     margin: 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .hero {
+    gap: 2rem;
+    padding: 4rem;
+  }
+}
 .hero__title {
   margin: 0;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 2.5rem;
 }
+@media screen and (min-width: 1024px) {
+  .hero__wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .hero__subtitle {
   padding-top: 2rem;
+  padding-left: 3rem;
 }
 .hero__title-up {
   margin-bottom: 0;
@@ -368,6 +396,13 @@ iframe {
 }
 .shows__ticket {
   border-bottom: 4px solid #E1E1E1;
+}
+.shows__ticket:hover {
+  background-color: #FAFAFA;
+  box-shadow: 10rem #E1E1E1;
+}
+.shows__ticket--selected {
+  background-color: #E1E1E1;
 }
 .shows__item {
   color: #000000;
