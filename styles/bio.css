@@ -640,12 +640,10 @@ textarea {
 
 #guest__comment::-moz-placeholder {
   position: relative;
-  top: -2.5rem;
 }
 
 #guest__comment::placeholder {
   position: relative;
-  top: -2.5rem;
 }
 
 .previous {

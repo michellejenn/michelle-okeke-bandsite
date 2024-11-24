@@ -115,8 +115,9 @@
                 <!-- Comment -->
                  <div class="comment__name">
                     <label for="comment">COMMENT</label>
-
-                     <input type="textarea" rows="4" cols="10" wrap="hard" name="comment" id ="guest__comment" class =" comment__input" placeholder ="Add a new comment" required>
+                    <!-- <textarea name="comment" id="guest__comment" class =" comment__input"  wrap="hard"  rows="4" cols="10" placeholder="Add a new comment" required></textarea> -->
+                    <!-- <textarea placeholder="Hello" id="guest__comment"></textarea> -->
+                     <input type="textarea" rows="4" cols="10" wrap="hard" name="comment" id ="guest__comment"  class =" comment__input" placeholder ="Add a new comment" required>
                  </div>
                  <!-- form  button -->
                  <button id = "submit__button" type ="submit" class = "comment__submit">COMMENT</button>
@@ -179,6 +180,8 @@
             <p class ="footer__copyright">Copyright The Bees Knees 2023 All Rights Reserved</p>
         </section>
     </footer>
-<script src="./scripts/index-page.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./scripts/band-site-api.js" type="module"></script>
+<script src="./scripts/index-page.js" type="module"></script>
 </body>
 </html>

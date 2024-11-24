@@ -1,15 +1,14 @@
-// TICKETARRAY SERVING AS MY DATABASE/SOURCE OF TRUTH
-const ticketArray =[
-    {date:"Mon Sept 09 2024", venue:"Ronald Lane ", location:"San Francisco, CA"}, 
-    {date:"Tue Sept 17 2024" ,venue: "Pier 3 East ", location:"San Francisco, CA"},
-    {date:"Sat Oct 12 2024", venue:"View Lounge", location:"San Francisco, CA"}, 
-    {date:"Sat Nov 16 2024",venue:"Hyatt Agency", location:"San Francisco, CA"},
-    {date:"Fri Nov 29 2024", venue:"Moscow Center", location:"San Francisco, CA"}, 
-    {date:"Wed Dec 18 2024",venue:"Press Club", location:"San Francisco, CA"},
-]
+import { BandSiteApi } from "../scripts/band-site-api.js";
+// import { comment } from "./index-page.js";
+
+const comment2 = new BandSiteApi()
+const ticketArray = await comment2.getShows()
+// console.log (ticketArray)
 
 // SELECTING MY PARENT HTML CLASS TO APPEND CHILDREN
 const showsSection = document.querySelector('.shows__tickets');
+
+
 
 // LOOPING THROUGH THE TICKET ARRAY TO CREATE HTML ELEMENTS USING JS DOM
 for (let i = 0; i < ticketArray.length; i++) {
@@ -29,7 +28,8 @@ for (let i = 0; i < ticketArray.length; i++) {
     dateHeading.innerText = 'DATE';
     const dateText = document.createElement('p');
     dateText.classList.add('shows__item', 'shows__item--date');
-    dateText.innerText = ticket.date;
+    const date = ticket.date;
+    dateText.innerText = new Date(date).toLocaleDateString('en-US');
     dateItem.appendChild(dateHeading);
     dateItem.appendChild(dateText);
     
@@ -41,7 +41,7 @@ for (let i = 0; i < ticketArray.length; i++) {
     venueHeading.innerText = 'VENUE';
     const venueText = document.createElement('p');
     venueText.classList.add('shows__item');
-    venueText.innerText = ticket.venue;
+    venueText.innerText = ticket.place;
     venueItem.appendChild(venueHeading);
     venueItem.appendChild(venueText);
     

@@ -319,7 +319,7 @@ textarea{
 }
 #guest__comment::placeholder{
     position: relative;
-    top: -2.5rem;
+    // top: -2.5rem;
 }
 .previous{
     padding-left: 1rem;
@@ -362,6 +362,8 @@ textarea{
     }
     &__comment{
         font-size: 1.5rem;
+       
+       
     }
     &__image{
         background-color: $secondary-color-mercury;
