@@ -19,10 +19,12 @@
 // ]
 
 import { BandSiteApi } from "./band-site-api.js";
+
+export const comment = new BandSiteApi();
 // SELECTING HTML PARENT CLASS USING DOM
 let commentElement = document.querySelector(".previous");
 
-export const comment = new BandSiteApi();
+
 
 // FUNCTION TO LOOP THROUGH ARRAY AND INSERT THE HTML STRUCTURE TO THE WEBPAGE
 async function displayComments(){
@@ -101,7 +103,7 @@ commentFormBody.addEventListener("submit", async (event)=>{
     comment: event.target.comment.value
    }
 
-  console.log(newComment)
+//   console.log(newComment)
    const response = await comment.postComment(newComment);
    console.log(response)
   

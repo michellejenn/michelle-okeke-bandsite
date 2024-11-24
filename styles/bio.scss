@@ -197,23 +197,37 @@ input::placeholder {
 
 .comment{
     border-bottom: 2px solid $secondary-color-mercury;
+    margin-left:1rem;
+    margin-right: 1rem;
     
-    padding-bottom: 2rem;
+    // padding-bottom: 2rem;
+    @include tablet{
+        border-bottom: 0px;
+    }
+    @include desktop{
+        border-bottom: 0px;
+    }
     
     &__title{
-        padding-left: 1rem;
+        // padding-left: 1rem;
         @include tablet{
             padding-left: 3rem;
             padding-right: 3rem;
         }
     }
     &__form{
+        padding-bottom: 2rem;
         @include tablet{
             margin-left: 6rem;
             margin-right: 6rem;
+            border-bottom:2px solid $secondary-color-mercury;
+            padding-bottom: 2rem;
         }
         @include desktop{
-            margin-left: 10rem;
+            margin-left: 14rem;
+            margin-right: 14rem;
+            border-bottom:2px solid $secondary-color-mercury;
+            
         }
     }
     &__avatar{
@@ -229,8 +243,11 @@ input::placeholder {
     &__name{ 
         display: flex;
         flex-direction: column;
-        padding-left: 4.2rem;
+        margin-left: 3.5rem;
         gap: 1rem;
+        @include tablet{
+            margin-left: 4rem;
+        }
     }
     &__section{
         display: flex;
@@ -240,128 +257,196 @@ input::placeholder {
     &__profile{
         display: flex;
         gap: 1rem;
-        padding-left: 1rem;
+       
+       
+        // padding-left: 1rem;
 
         
         
     }
     &__input{
-        width: auto;
-        min-width: 80vw;
+        // width: auto;
+        width: 85vw;
         height: 3rem;
         margin-bottom: 2rem;
         background-color: $secondary-color-alabaster;
-        margin-right: 2rem;
+        // margin-right: 2rem;
+      
         
       
         @include tablet{
-            min-width: 70vw;
+            // min-width: 70vw;
+            width: 65vw;
         }
         @include desktop{
-            min-width: 50vw;
+            width: 45vw;
            }
     }
     &__submit{
-        display: flex;
-        justify-self: center;
-        min-width: 80vw;
-        justify-content: center;
-        align-items: center;
-        margin-left: 2rem;
+        // display: flex;
+        // justify-self: center;
+        width: 85vw;
+        // min-width: 80vw;
+        // justify-content: center;
+        // align-items: center;
+        margin-left: 3.5rem;
         height: 4rem;
-        background-color: $secondary-color-darkblack;
+        background-color: $primary-color-black;
         color: $primary-color-white;
         border: 0px;
         font-size: 1.7rem;
-        border-radius: 0.25rem;
+        border-radius: 0.3rem;
         @include tablet{
-            display: flex;
-            justify-self:flex-end;
-            min-width: 20vw;
-            margin-right: 2rem;
+            
+            
+            width:30vw;
+            
+            margin-left: 42vw;
+            
+            
+            
+            // margin-right: 2rem;
         }
         @include desktop{
-            display: flex;
-            justify-self: center;
-            margin-right: 9rem;
+            width: 15vw;
+            font-size: 1.0rem;
+            height: 3rem;
+            margin-left: 35vw;
+            // display: flex;
+            // justify-self: center;
+            // margin-right: 9rem;
         } 
     }
 
 }
-#guest__name{
-    display: flex;
-   min-width: 85vw;
-   @include tablet{
-    min-width: 70vw;
-   }
-   @include desktop{
-    min-width: 40vw;
-   }
-}
-textarea{
-    resize: none;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
+// #guest__name{
+//     display: flex;
+//    min-width: 85vw;
+//    @include tablet{
+//     min-width: 70vw;
+//    }
+//    @include desktop{
+//     min-width: 40vw;
+//    }
+// }
+// textarea{
+//     resize: none;
+//     white-space: pre-wrap;
+//     word-wrap: break-word;
+//     overflow-wrap: break-word;
+// }
 #guest__comment{
     height: 8rem;
-    display: flex;
-    resize: none;
+    // display: flex;
+    // resize: none;
     @include tablet{
-        min-width: 70vw;
-        max-width: 70vw;
+        // min-width: 70vw;
+        // max-width: 70vw;
     }
     @include desktop{
-        min-width: 40vw;
-        max-width: 40vw;
+        // min-width: 40vw;
+        // max-width: 40vw;
        }
 }
 #guest__comment::placeholder{
-    position: relative;
+    // position: relative;
     // top: -2.5rem;
 }
 .previous{
-    padding-left: 1rem;
+    // padding-left: 1rem;
+    
     @include tablet{
-        margin-right: 5rem;
-        margin-left: 5rem;
+        // margin-right: 5rem;
+        // margin-left: 5rem;
     }
     &__article{
+        margin-left:1rem;
+        margin-right: 1rem;
+       
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        // width: 100vw;
         display: flex;
-        gap: 2rem;
-        padding-right: 2rem;
+        gap: 1rem;
+        // gap: 2rem;
+        // padding-right: 2rem;
         border-bottom: 0.125rem solid  $secondary-color-mercury;
-        margin-bottom: 2rem;
-        margin-right: 5rem;
+        // margin-bottom: 2rem; 
+        // margin-right: 5rem;
+        @include tablet{
+            margin-left: 7rem;
+            margin-right: 6rem;
+            border-bottom:2px solid $secondary-color-mercury;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            
+        }
         @include desktop{
-            max-width: 70vw;
-            justify-self: center;
+            margin-left: 14rem;
             margin-right: 14rem;
+            border-bottom:2px solid $secondary-color-mercury;
+            // max-width: 70vw;
+            // justify-self: center;
+            // margin-right: 14rem;
     }
+    
 }
-    &__wrapper{
-        display: flex;
-        gap: 15rem;
-        align-items: flex-end;
+    &__section{
+        width: 80vw;
+        @include tablet{
+        width: 65vw;
+        }
         @include desktop{
+            width: 40vw;
+        }
+
+       
+    }
+    &__wrapper{
+        // display: flex;
+        
+        padding-bottom: 0.5rem;
+        // justify-content: space-between;
+        // gap: 20rem;
+        // align-items: flex-end;
+        @include tablet{
+            padding-bottom: 0.8rem;
+            display: flex;
+            
+        }
+        @include desktop{
+            display: flex;
+            
+            
         }
     }
     
     &__name{
         font-size: 1.1rem;
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
         flex: 1;
     }
     &__date{
-        flex-grow: 1;
-        flex-basis: 5rem;
-        flex: 1;
+        // flex-grow: 1;
+        // flex-basis: 5rem;
+        // flex: 1;
+        margin: 0;
         color: $primary-color-silver;
     }
     &__comment{
         font-size: 1.5rem;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        @include tablet{
+            width: 65vw;
+        }
+        @include desktop{
+            width: 50vw
+        }
+        // max-width: 40ch;
        
        
     }
@@ -371,8 +456,10 @@ textarea{
         height: 3rem;
         border-radius: 50%;
         display: flex;
-        justify-self: flex-start;
-        margin-left: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        // justify-self: flex-start;
+        // margin-left: 1rem;
         max-width: 3rem;
         min-width: 3rem;
     }
