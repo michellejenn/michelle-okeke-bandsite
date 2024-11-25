@@ -105,8 +105,6 @@ li {
   background-color: #323232;
   color: #FFFFFF;
   font-size: 1.6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -121,7 +119,7 @@ li {
   }
 }
 .footer__heading {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .footer__heading {
@@ -131,7 +129,7 @@ li {
 }
 @media screen and (min-width: 1024px) {
   .footer__heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 .footer__unordered {
@@ -139,6 +137,7 @@ li {
   margin: 0;
   padding-bottom: 1rem;
   margin: 0;
+  margin-left: 1rem;
   padding-left: 0;
 }
 @media screen and (min-width: 768px) {
@@ -152,7 +151,8 @@ li {
 }
 .footer__icons {
   display: flex;
-  justify-content: space-between;
+  gap: 3rem;
+  padding-top: 1rem;
   padding-left: 0;
   width: 60%;
 }
@@ -180,6 +180,7 @@ li {
   }
 }
 .footer__logo-top {
+  font-weight: 400;
   display: none;
 }
 @media screen and (min-width: 768px) {
@@ -192,7 +193,9 @@ li {
 .footer__subsection {
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 60vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__subsection {
@@ -201,6 +204,7 @@ li {
     align-items: flex-start;
     justify-content: space-between;
     padding-right: 20px;
+    max-width: 30vw;
   }
 }
 .footer__container {
@@ -219,6 +223,10 @@ li {
     padding-right: 15rem;
   }
 }
+.footer__subheading {
+  margin: 1rem, 0, 1rem, 0;
+  font-weight: 700;
+}
 @media screen and (min-width: 768px) {
   .footer__subheading {
     width: auto;
@@ -233,11 +241,13 @@ li {
   }
 }
 .footer__booking {
-  font-size: 1rem;
+  padding-bottom: 2rem;
 }
 .footer__bottom {
   padding-top: 1.5rem;
   margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__bottom {
@@ -266,10 +276,10 @@ li {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(35, 24, 24, 0.5), rgba(9, 1, 1, 0.35)), url("../assets/images/hero-bio.jpg");
+  background-image: linear-gradient(rgba(71, 52, 52, 0.54), rgba(102, 89, 89, 0.695)), url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  min-height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -286,13 +296,19 @@ li {
   margin: 0;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   width: 100%;
   padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 2.6rem;
+    margin-left: 4.5rem;
   }
 }
 
@@ -401,17 +417,20 @@ li {
 @media screen and (min-width: 768px) {
   .content__paragraph {
     font-size: 0.875rem;
-    width: 45%;
+    width: 48%;
+    margin-right: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .content__paragraph {
     font-size: 1.3rem;
+    width: 50%;
   }
 }
 .content__item {
-  font-size: 2.2rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
+  word-spacing: 10px;
 }
 @media screen and (min-width: 768px) {
   .content__item {
@@ -423,6 +442,12 @@ li {
 
 .Gallery {
   background-color: #FAFAFA;
+}
+@media screen and (min-width: 1024px) {
+  .Gallery {
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+  }
 }
 .Gallery__heading {
   padding-left: 1rem;
@@ -613,6 +638,7 @@ input::placeholder {
 #guest__comment {
   height: 8rem;
 }
+
 .previous__article {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -652,6 +678,7 @@ input::placeholder {
   }
 }
 .previous__wrapper {
+  display: flex;
   padding-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -702,4 +729,31 @@ input::placeholder {
   margin-bottom: 0;
   max-width: 3rem;
   min-width: 3rem;
+}
+.previous__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  display: inline;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.like-clicked {
+  animation: likeAnimation 0.3s ease-out;
 }/*# sourceMappingURL=bio.css.map */

@@ -31,5 +31,28 @@ export class BandSiteApi {
             console.error("Error getting show dates", error)
         }
     }
+    async likeComment(commentId){
+        try{
+            const response = await axios.put(`${this.baseURL}/comments/${commentId}/like?api_key=${this.apiKey}`);
+            // (`${this.baseURL}/comments/?api_key=${this.apiKey}&:id=${commentId}/like`)
+            console.log(response.data)
+            return(response.data||0);
+
+        }
+        catch(error){
+            console.error("Error getting likes", error)
+        }
+    }
+    async deleteComment(commentId) {
+        try {
+            const response = await axios.delete(`${this.baseURL}/comments/${commentId}?api_key=${this.apiKey}`);
+            return response.data; 
+        } catch (error) {
+            console.error("Error deleting comment", error);
+            
+        }
+    }
+    
+
 
 }
